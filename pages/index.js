@@ -8,10 +8,6 @@ export default function Home() {
     <>
       <Navbar user = {user}/>
       <h1>Main Page</h1>
-      {
-        user ? <a href="/api/auth/logout">Logout</a> : <a href="/api/auth/login">Login</a>
-      }
-      
       
     </>
   )
