@@ -14,7 +14,6 @@ export default function Profile() {
         <img src={user.picture} alt={user.name} />
         <h2>{user.nickname}</h2>
         <p>{user.email}</p>
-        <a href="/api/auth/logout">Logout</a>
       </div>
     )
   );
