@@ -110,8 +110,11 @@ export default function Navabar({user}) {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-        <Link href="/profile">
+        <Link href="/profile" className='link'>
             <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+        </Link>
+        <Link href="/api/auth/logout" className='link'>
+            <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
         </Link>
     </Menu>
   );
