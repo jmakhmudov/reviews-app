@@ -16,6 +16,9 @@
     "@mui/material": "^5.11.2",
     "@mui/styled-engine-sc": "^5.11.0",
     "@next/font": "13.1.1",
+    "@prisma/client": "^4.8.0",
+    "dark-mode-light-mode": "^1.4.1",
+    "darkmode-js": "^1.5.7",
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.1",
     "next": "13.1.1",
@@ -23,5 +26,8 @@
     "react-dom": "18.2.0",
     "styled-components": "^5.3.6",
     "v8": "^0.1.0"
+  },
+  "devDependencies": {
+    "prisma": "^4.8.0"
   }
 }

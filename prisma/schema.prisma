@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model reviews {
+  id          BigInt   @id @unique(map: "id") @default(autoincrement()) @db.UnsignedBigInt
+  title       String   @db.Text
+  description String   @db.Text
+  author      String   @db.Text
+  date        DateTime @db.Date
+}
