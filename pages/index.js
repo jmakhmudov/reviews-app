@@ -11,7 +11,7 @@ export default function Home({reviews}) {
     <>
       <Navbar user = {user}/>
 
-      <h1>Main Page</h1>
+      <h1>Main Page {data[0].title}</h1>
       <ReviewCard review={data[0]}/>
       
     </>

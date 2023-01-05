@@ -4,11 +4,12 @@ import { PrismaClient } from "@prisma/client"
 
 export default function Review({review}) {
     const router = useRouter()
+    const id = router.query.reviewId
 
     return (
         <>
             <Navbar/>
-            <h1>gjg</h1>
+            <h1>{id}</h1>
         </>
     )
 }
@@ -34,7 +35,10 @@ export async function getStaticProps(context) {
 
     const review = await JSON.stringify(id, (_, v) => typeof v === 'bigint' ? `${v}#bigint` : v).replace(/"(-?\d+)#bigint"/g, (_, a) => a)
 
-    if(!review[0].title) {
+    const d = JSON.parse(review)
+
+
+    if(!d) {
         return {
             notFound: true
         }
