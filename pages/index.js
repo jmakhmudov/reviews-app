@@ -23,7 +23,6 @@ export async function getStaticProps() {
 
   const data = await prisma.reviews.findMany()
   const reviews = await JSON.stringify(data, (_, v) => typeof v === 'bigint' ? `${v}#bigint` : v).replace(/"(-?\d+)#bigint"/g, (_, a) => a)
-  console.log(reviews)
   return {
 
     props :{

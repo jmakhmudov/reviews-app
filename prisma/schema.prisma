@@ -14,3 +14,9 @@ model reviews {
   author      String   @db.Text
   date        DateTime @db.Date
 }
+
+model likes {
+  id        BigInt @id @unique(map: "id") @default(autoincrement()) @db.UnsignedBigInt
+  review_id String @db.Text
+  user_id   String @db.Text
+}

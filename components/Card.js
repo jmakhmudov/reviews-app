@@ -10,6 +10,9 @@ export default function ReviewCard({review}) {
   return (
     <Card sx={{ maxWidth: 345 }}>
         <CardActionArea >
+            <Typography gutterBottom variant="body3" color="text.secondary">
+                {review.date}
+            </Typography>
             <CardMedia
                 component="img"
                 height="140"
