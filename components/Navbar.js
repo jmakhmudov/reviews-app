@@ -226,7 +226,7 @@ export default function Navbar({user}) {
               }}
             >
               {pages.map((page) => (
-                <Link href={`/reviews/${page.toLowerCase()}`}>
+                <Link href={`/reviews/${page.toLowerCase()}`} key={page}>
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
@@ -236,7 +236,7 @@ export default function Navbar({user}) {
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link href={`/reviews/${page.toLowerCase()}`}>
+              <Link href={`/reviews/${page.toLowerCase()}`} key={page}>
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
